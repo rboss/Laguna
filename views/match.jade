@@ -1,0 +1,10 @@
+html
+  head
+  title Match #{id}
+  script
+    if (location.hostname == "localhost") { document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=2"></' + 'script>') }  
+  body
+    p match id: #{id}
+    p duration: #{match_details.duration}
+    p= new Date(match_details.starttime)
+    

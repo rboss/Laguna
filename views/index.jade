@@ -6,3 +6,11 @@ html
       if (location.hostname == "localhost") { document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=2"></' + 'script>') }
   body
   h1 #{message}
+  p status: #{matchHistory.status}
+  p number of results: #{matchHistory.num_results}
+  p total results #{matchHistory.total_results}
+  p results remaining: #{matchHistory.results_remaining}
+  ul matches
+    each match in matchHistory.matches
+      li 
+        a(href="/match/#{match.match_id}") #{match.match_id}
