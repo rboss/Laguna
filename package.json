@@ -5,7 +5,8 @@
     "express": "3.1.x",
     "node-static": "0.6.x",
     "express": "3.x",
-    "jade": "x"
+    "jade": "x",
+    "mongodb": "1.2.x"
   },
   "engines": {
     "node": "0.6.x",

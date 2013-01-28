@@ -3,7 +3,15 @@ var app = express();
 var http = require('http');
 var port = process.env.PORT || 2013;
 
+var mongoClient = require('mongodb').MongoClient;
+
 //var fileServer = new static.Server('./public');
+
+mongoClient.connect("mongodb://localhost:27017/db", function(err, db) {
+  if(!err) {
+    console.log("We are connected");
+  }
+});
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
