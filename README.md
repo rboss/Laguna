@@ -1,7 +1,8 @@
 Laguna
 ======
 
-TODO:
+TODO
+--------
 -Populate mongodb database with rest api call data
 
 -Start using twitter bootstrap for layout/design
