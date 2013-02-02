@@ -5,7 +5,6 @@ exports.init = function() {
 	var db = mongojs("mongodb://localhost:27017/db", ["matches"]);
 
 
-
 	return {
 		findMatches: function(callback) {
 			db.matches.find(function(err, matches) {
@@ -21,6 +20,7 @@ exports.init = function() {
 			db.matches.insert(match);
 		},
 		clearMatches: function() {
+			console.log('removing all matches')
 			db.matches.remove();
 		}
 	};

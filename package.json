@@ -8,7 +8,9 @@
     "jade": "x",
     "mongodb": "1.2.x",
     "mongojs": "0.5.x",
-    "underscore": "1.4.x"
+    "underscore": "1.4.x",
+    "mocha": "1.8.x",
+    "should": "1.2.1"
   },
   "engines": {
     "node": "0.6.x",
