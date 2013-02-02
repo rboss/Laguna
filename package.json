@@ -6,7 +6,9 @@
     "node-static": "0.6.x",
     "express": "3.x",
     "jade": "x",
-    "mongodb": "1.2.x"
+    "mongodb": "1.2.x",
+    "mongojs": "0.5.x",
+    "underscore": "1.4.x"
   },
   "engines": {
     "node": "0.6.x",
