@@ -17,7 +17,7 @@ app.configure(function(){
 
 
 app.get(['/', '/matches'], function(req, res) {
-	webapi.getMatchhistory(function(data) {
+	webapi.getMatchhistory("", function(data) {
 		res.render('index', { message: "laguna", matchHistory: data });
 	});	
 });
