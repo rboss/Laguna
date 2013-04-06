@@ -1,10 +1,36 @@
-html
-  head
-  title Match #{id}
-  script
-    if (location.hostname == "localhost") { document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=2"></' + 'script>') }  
-  body
-    p match id: #{id}
+extend layout
+block content
+  .container
+    h2 ##{id}
     p duration: #{match_details.duration}
     p= new Date(match_details.starttime)
-    
+
+    table.table.table-striped.table-bordered
+      thead
+        tr
+          th #          
+          th hero id
+          th level
+          th kills
+          th deaths
+          th assists
+          th gold
+          th last hits
+          th denies
+          th gold/minute
+          th exp/minute
+
+      tbody
+        each player in match_details.players
+          tr
+            td #{player.account_id}
+            td #{player.hero_id}
+            td #{player.level}
+            td #{player.kills}
+            td #{player.deaths}
+            td #{player.assists}
+            td #{player.gold}
+            td #{player.last_hits}
+            td #{player.denies}
+            td #{player.gold_per_min}
+            td #{player.exp_per_min}

@@ -1,0 +1,25 @@
+!!! 5
+html
+  head
+    title= 'title'
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/bootstrap-responsive.css')
+    script(rel='text/javascript', src='/js/bootstrap.js')
+    script    
+      if (location.hostname == "localhost") { document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=2"></' + 'script>') }
+  body
+  .navbar.navbar-fixed-top.navbar-inverse
+    .navbar-inner
+      .container
+        a.brand(href="#")= 'Laguna'
+        .nav-collapse
+          ul.nav
+            li.active
+              a(href="#") Home
+            li
+                a(href="#about") About
+            li
+                a(href="#contact") Contact
+  block content
+    

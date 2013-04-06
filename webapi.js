@@ -43,7 +43,7 @@ exports.getMatchhistory = function(params, callback) {
 		res.on('data', function(chunk) {
 			data += chunk;
 		});
-
+		
 		res.on('end', function() {
 			console.log('End of get request for match history.');
 			callback(JSON.parse(data).result);
